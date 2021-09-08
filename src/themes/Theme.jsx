@@ -3,8 +3,8 @@ export const dark = {
   primaryTextColor: '#FFF',
   secondaryTextColor: '#CCC',
   tertiaryTextColor: '#999',
-  background: '#000',
-  shadowColor: 'rgba(0, 0, 0, 0.5)',
+  background: '#1a222c',
+  shadowColor: 'rgba(0, 0, 0, 0)',
 };
 
 export const light = {
