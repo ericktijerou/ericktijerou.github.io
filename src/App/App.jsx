@@ -9,8 +9,10 @@ const App = () => {
     <ThemeProvider>
       <div className='app'>
         <Toggle />
-        <Content />
-        <Buttons />
+        <div className='container'>
+          <Content />
+          <Buttons />
+        </div>
         <Footer />
         <Particles />
       </div>

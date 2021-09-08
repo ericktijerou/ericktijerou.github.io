@@ -21,3 +21,33 @@ body {
   justify-content: center;
   text-align: center;
 }
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  position: absolute;
+  border: 3px solid #73AD21;
+  padding: 10px;
+  align-items: left;
+  justify-content: left;
+  text-align: left;
+  font-family: "Poppins", sans-serif;
+  @media only screen and (max-device-width: 992px) {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;    
+  }
+  @media only screen and (min-device-width: 992px) {
+    max-width: 920px;
+  }
+  @media only screen and (min-device-width: 1200px) {
+    max-width: 1140px;
+  }
+}
+
