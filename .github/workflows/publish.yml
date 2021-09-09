@@ -14,8 +14,7 @@ jobs:
     name: Node ${{ matrix.node }} sample
     steps:
       - uses: actions/checkout@v2
-      - run: git config --global user.email "ericktijerou@gmail.com"
-      - run: git config --global user.name "Erick Tijero"
+      - uses: fregante/setup-git-user@v1
       - name: Setup node
         uses: actions/setup-node@v2
         with:
