@@ -2,93 +2,29 @@ name: Build & deploy
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
 
 jobs:
-  build:
+  build_test:
     runs-on: ubuntu-latest
+
     strategy:
       matrix:
-        node: [ '14']
-    name: Node ${{ matrix.node }} sample
+        node-version: [14.x]
+
     steps:
       - uses: actions/checkout@v2
-
-      - name: Setup node
+      - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
         with:
-          node-version: ${{ matrix.node }}
-
-      - name: Install NPM packages
-        run: npm ci
-    
-      - name: Build project
-        run: npm run build
-
-      - name: Upload production-ready build files
-        uses: actions/upload-artifact@v2
+          node-version: ${{ matrix.node-version }}
+      - name: npm ci, build and test
+        run: |
+          npm ci
+          npm run build --if-present
+          npm test      
+      - name: deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          name: production-files
-          path: ./build
-
-  deploy:
-    name: Deploy
-    needs: build
-    runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
-    
-    steps:
-    - name: Download artifact
-      uses: actions/download-artifact@v2
-      with:
-        name: production-files
-        path: ./build
-
-    - name: Deploy to gh-pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
-        publish_dir: ./build
-
-
-# name: CI/CD
-
-# on:
-#   push:
-#     branches:
-#       - main
-
-# jobs:
-#   build:
-#     runs-on: ubuntu-latest
-#     strategy:
-#       matrix:
-#         node: [ '14']
-#     name: Node ${{ matrix.node }} sample
-#     steps:
-#       - uses: actions/checkout@v2
-
-#       - name: Setup node
-#         uses: actions/setup-node@v2
-#         with:
-#           node-version: ${{ matrix.node }}
-
-#       - name: Install dependencies
-#         run: npm install
-
-#       - name: Build
-#         run: npm run build
-
-#       - name: Deploy
-#         run: |
-#           git config --global user.name $user_name
-#           git config --global user.email $user_email
-#           git remote set-url origin https://${github_token}@github.com/${repository}
-#           npm run deploy
-#         env:
-#           user_name: 'github-actions[bot]'
-#           user_email: 'github-actions[bot]@users.noreply.github.com'
-#           github_token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
-#           repository: ${{ github.repository }}
-
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          publish_dir: ./build
