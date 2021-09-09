@@ -13,7 +13,7 @@ describe('application tests', () => {
 
   test('should render name', () => {
     const element = screen.getByTestId('name');
-    expect(element).toHaveTextContent(/Adam Alston/i);
+    expect(element).toHaveTextContent(/Erick Tijero/i);
   });
 
   test('should render title', () => {
@@ -23,17 +23,17 @@ describe('application tests', () => {
 
   test('should render creator', () => {
     const element = screen.getByTestId('creator');
-    expect(element).toHaveTextContent(/Adam Alston/i);
+    expect(element).toHaveTextContent(/Erick Tijero/i);
   });
 
   test('should render link to source code', () => {
     const element = screen.getByTestId('source');
-    expect(element).toHaveAttribute('href', 'https://github.com/adamalston/v2');
+    expect(element).toHaveAttribute('href', 'https://github.com/ericktijerou');
   });
 
   const buttons = {
-    GitHub: 'https://github.com/adamalston/',
-    LinkedIn: 'https://www.linkedin.com/in/adam-alston/',
+    Github: 'https://github.com/ericktijerou/',
+    LinkedIn: 'https://www.linkedin.com/in/ericktijerou/',
     Resume: 'https://drive.google.com/drive/folders/10k8NWflSYQ5laPzuWtK3bzUKzuOeas8i/',
     Email: 'mailto:aalston9@gmail.com',
   };
