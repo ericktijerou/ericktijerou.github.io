@@ -11,12 +11,20 @@ const Container = styled.div`
     outline: 0;
   }
 
+  .bt-container {
+    display: flex;
+  }
+
   .button-container {
     display: inline-block;
     height: 4rem;
     width: 4rem;
     margin-right: 3.5rem;
     margin-top: 3rem;
+    @media only screen and (max-device-width: 992px) {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
   }
 
   .button {
@@ -35,6 +43,7 @@ const Container = styled.div`
 
   .icon {
     align-items: center;
+    padding: 0.3rem;
   }
 
   .icon_title {
@@ -115,7 +124,7 @@ export const Buttons = () => {
   ];
 
   return (
-    <Container theme={theme}>
+    <Container theme={theme} className='bt-container'>
       {DATA.map(({ href, aria, icon, label }, i) => (
         <span className='button-container' key={i}>
           <a className='button' href={href} target='_blank' aria-label={aria} rel='noopener noreferrer'>
