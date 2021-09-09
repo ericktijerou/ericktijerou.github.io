@@ -59,7 +59,7 @@ export const Content = () => {
 
   return (
     <div>
-      <C.Name theme={theme} data-v2='name' aria-label='My name is Erick Tijero'>Erick Tijero Urbano</C.Name>
+      <C.Name theme={theme} data-v2='name' aria-label='My name is Erick Tijero'>Erick Tijero</C.Name>
       <C.Title theme={theme} data-v2='title' aria-label='I am a software engineer'>
         I'm <span ref={el} style={hStyle}></span>
       </C.Title>
