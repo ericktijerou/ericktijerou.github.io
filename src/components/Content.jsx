@@ -45,7 +45,7 @@ export const Content = () => {
 
   useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ["Student", "Developer", "Competitive Programmer", "Coder"],
+      strings: ["a developer.", "an engineer.", "a freelancer.", "a data science enthusiast."],
       loop: true,
       typeSpeed: 60,
       backSpeed: 35,

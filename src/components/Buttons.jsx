@@ -13,15 +13,16 @@ const Container = styled.div`
 
   .button-container {
     display: inline-block;
-    height: 6rem;
-    width: 6rem;
-    margin: 0 1.75rem;
+    height: 4rem;
+    width: 4rem;
+    margin-right: 3.5rem;
+    margin-top: 3rem;
   }
 
   .button {
     transition: color 0.5s linear;
-    height: 6rem;
-    width: 6rem;
+    height: 4rem;
+    width: 4rem;
     color: ${({ theme }) => theme.primaryTextColor};
     display: table-cell;
     vertical-align: middle;
@@ -33,13 +34,11 @@ const Container = styled.div`
   }
 
   .icon {
-    height: 4.5rem;
-    width: 4.5rem;
-    padding: 1rem;
+    align-items: center;
   }
 
   .icon_title {
-    font-size: 1.25rem;
+    font-size: 0.8rem;
   }
 
   .button:hover {
@@ -66,20 +65,17 @@ const Container = styled.div`
 
   @media only screen and (max-device-width: 820px) and (-webkit-min-device-pixel-ratio: 2) {
     .button-container {
-      height: 5rem;
-      width: 5rem;
-      margin: 0 0.8rem;
+      height: 3rem;
+      width: 3rem;
     }
 
     .button {
-      height: 5rem;
-      width: 5rem;
+      height: 3rem;
+      width: 3rem;
     }
 
     .icon {
-      height: 4rem;
-      width: 4rem;
-      padding: 0.5rem;
+
     }
 
     .icon_title {
