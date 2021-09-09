@@ -32,7 +32,7 @@ describe('application tests', () => {
   });
 
   const buttons = {
-    Github: 'https://github.com/ericktijerou/',
+    GitHub: 'https://github.com/ericktijerou/',
     LinkedIn: 'https://www.linkedin.com/in/ericktijerou/',
     Resume: 'https://drive.google.com/drive/folders/10k8NWflSYQ5laPzuWtK3bzUKzuOeas8i/',
     Email: 'mailto:aalston9@gmail.com',

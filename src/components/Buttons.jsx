@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import styled from 'styled-components';
 
 import { AppContext } from './../App/AppContext';
-import { Github, LinkedIn, Resume, Email } from './../icons';
+import { GitHub, LinkedIn, Resume, Email } from './../icons';
 
 const Container = styled.div`
   a,
@@ -90,9 +90,9 @@ export const Buttons = () => {
   const DATA = [
     {
       href: 'https://github.com/ericktijerou',
-      aria: 'Github profile',
-      icon: <Github />,
-      label: 'Github',
+      aria: 'GitHub profile',
+      icon: <GitHub />,
+      label: 'GitHub',
     },
     {
       href: 'https://www.linkedin.com/in/ericktijerou/',
