@@ -30,13 +30,13 @@ export const Footer = () => {
     <F.Container isMobile={isMobile}>
       <F.Text theme={theme} aria-label='Designed and built by Erick Tijero'>Designed and built by&nbsp;
         <F.Link theme={theme} data-v2='creator' href='https://www.ericktijerou.com/'>Erick Tijero</F.Link>
-        {isMobile ? (
+        {/* {isMobile ? (
           <></>
         ) : (
           <>
             &nbsp;|&nbsp;<F.Link theme={theme} data-v2='source' aria-label='Source code' href='https://github.com/ericktijerou'>Source</F.Link>
           </>
-        )}
+        )} */}
       </F.Text>
     </F.Container>
   );
