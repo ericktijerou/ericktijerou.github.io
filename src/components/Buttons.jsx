@@ -104,7 +104,7 @@ export const Buttons = () => {
       label: 'GitHub',
     },
     {
-      href: 'https://www.linkedin.com/in/ericktijerou/',
+      href: 'https://www.linkedin.com/in/ericktijerou',
       aria: 'LinkedIn profile',
       icon: <LinkedIn />,
       label: 'LinkedIn',
