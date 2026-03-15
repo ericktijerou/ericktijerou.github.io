@@ -110,7 +110,7 @@ export const Buttons = () => {
       label: 'LinkedIn',
     },
     {
-      href: 'https://drive.google.com/file/d/1Nj-8OXgP_SQUAA-NBcU7HNvcfcXMguw1/view?usp=sharing',
+      href: 'https://drive.google.com/file/d/1YY-rz8ourqS-WsRrafHTJDd5iig8hfhl/view?usp=sharing',
       aria: 'Resume',
       icon: <Resume />,
       label: 'Resume',
